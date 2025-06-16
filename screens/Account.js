@@ -107,18 +107,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  button: {
-    backgroundColor: '#FCC000',
-    paddingVertical: width * 0.03,
-    paddingHorizontal: width * 0.18,
-    borderRadius: 50,
-    alignItems: 'center',
-  },
   card: {
     width: '90%',
     backgroundColor: '#191919',
-    borderRadius: 10,
-    padding: 20,
+    borderRadius: width * 0.03,
+    padding: width * 0.05,
     marginBottom: height * 0.025,
   },
 
@@ -134,7 +127,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: height * 0.01,
     alignSelf: 'flex-start',
-    paddingLeft: 20,
+    paddingLeft: width * 0.05,
   },
   yellowLine: {
     width: width,
@@ -147,7 +140,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: height * 0.03,
     fontWeight: 'bold',
-    marginVertical: 10,
+    marginVertical: width * 0.03,
   },
 
   future: {
@@ -184,7 +177,7 @@ const styles = StyleSheet.create({
     width: width * 0.95, 
     height: height * 0.24,
     marginTop: width * 0.05, 
-    padding: width * 0.035,
+    padding: width * 0.045,
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 10,
@@ -240,6 +233,5 @@ const styles = StyleSheet.create({
   footerIcon: {
     fontSize: width * 0.06,
     color: '#fff',
-    //marginBottom: 50,
   },
 });
