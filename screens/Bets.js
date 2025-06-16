@@ -38,6 +38,7 @@ export default function Bets() {
         padding: 8,
         fontSize: width * 0.045,
         texto: 'Talvez seja bom conversar com alguém',
+        color: '#fff',
       };
     }
     return {
@@ -79,7 +80,7 @@ export default function Bets() {
       </View>
 
       <TouchableOpacity style={[ helpButton, { backgroundColor, padding }]} activeOpacity={0.7}>
-        <Text style={{ fontSize, textAlign: 'center' }}>{texto}</Text>
+        <Text style={{ fontSize, textAlign: 'center', color: '#fff' }}>{texto}</Text>
       </TouchableOpacity>
       
       <View style={styles.investmentContainer}>
@@ -117,27 +118,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  button: {
-    backgroundColor: '#FCC000',
-    paddingVertical: width * 0.03,
-    paddingHorizontal: width * 0.18,
-    marginTop: height * 0.08,
-    borderRadius: 50,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#121212',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   card: {
-    width: 300,
-    height: 120,
-    borderRadius: 12,
+    width: width * 0.7,
+    height: height * 0.15,
+    borderRadius: width * 0.03,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 30,
-    padding: 15,
+    marginBottom: width * 0.07,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
@@ -146,7 +133,7 @@ const styles = StyleSheet.create({
   },
   cardText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: width * 0.045,
     textAlign: 'center',
     fontWeight: 'bold',
   },
@@ -156,47 +143,34 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: height * 0.01,
     alignSelf: 'flex-start',
-    paddingLeft: 20,
-    //textAlign: 'left', // força o alinhamento à esquerda
+    paddingLeft: width * 0.03,
   },
   yellowLine: {
     width: width,
-    height: 10,                  
+    height: height * 0.01,                  
     backgroundColor: '#FCC000',
-    //marginTop: height * 0.01,
     marginBottom: height * 0.05,          
-  },
-  label: {
-    color: '#cccccc',
-    fontSize: 14,
   },
   footer: {
     position: 'absolute',
-    bottom: 40,         // sobe 20 pixels acima dos botões do sistema
-    left: 45,
-    right: 0,
+    bottom: height * 0.05,
+    left: width * 0.1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#191919',
-    paddingVertical: 15,
-    marginTop: 10,
+    paddingVertical: height * 0.02,
     width: width * 0.8,
-    gap: 30,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    gap: width * 0.05,
+    borderTopLeftRadius: width * 0.035,
+    borderTopRightRadius: width * 0.035,
     zIndex: 10,
-  },
-  footerIcon: {
-    fontSize: 24,
-    color: '#fff',
-    //marginBottom: 50,
   },
   investmentContainer: {
     backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 20,
-    marginTop: 30,
+    borderRadius: width * 0.035,
+    padding: width * 0.05,
+    marginTop: height * 0.03,
     width: '85%',
     alignItems: 'center',
     shadowColor: '#000',
@@ -208,29 +182,29 @@ const styles = StyleSheet.create({
 
   investmentTitle: {
     color: '#121212',
-    fontSize: 18,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
-    marginBottom: 12,
+    marginBottom: height * 0.004,
     textAlign: 'center',
   },
 
   investmentText: {
     color: '#333',
-    fontSize: 16,
-    marginVertical: 3,
+    fontSize: width * 0.038,
+    marginVertical: height * 0.004,
   },
 
   investButton: {
-    marginTop: 15,
+    marginTop: height * 0.01,
     backgroundColor: '#00C853',
-    paddingVertical: 10,
-    paddingHorizontal: 25,
-    borderRadius: 8,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.038,
+    borderRadius: width * 0.03,
   },
 
   investButtonText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: width * 0.038,
   },
 });

@@ -90,7 +90,7 @@ export default function Account() {
           <FontAwesome name="user" size={28} color="#fff" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Bets')}>
+        <TouchableOpacity onPress={() => navigation.replace('Bets')}>
           <Text style={styles.footerIcon}>📈</Text>
         </TouchableOpacity>
       </View>
@@ -99,10 +99,6 @@ export default function Account() {
     </View>
   );
 }
-
-//<TouchableOpacity onPress={() => navigation.replace('AccessAccount')}>
-//          <Text style={styles.footerIcon}><FontAwesomeIcon icon="fa-regular fa-user" /></Text>
-//        </TouchableOpacity>
 
 const styles = StyleSheet.create({
   container: {
@@ -115,14 +111,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FCC000',
     paddingVertical: width * 0.03,
     paddingHorizontal: width * 0.18,
-    //marginTop: height * 0.08,
     borderRadius: 50,
     alignItems: 'center',
-  },
-  buttonText: {
-    color: '#121212',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
   card: {
     width: '90%',
@@ -145,65 +135,56 @@ const styles = StyleSheet.create({
     marginBottom: height * 0.01,
     alignSelf: 'flex-start',
     paddingLeft: 20,
-    //textAlign: 'left', // força o alinhamento à esquerda
   },
   yellowLine: {
     width: width,
-    height: 10,                  
+    height: height * 0.01,                  
     backgroundColor: '#FCC000',
-    //marginTop: height * 0.01,
     marginBottom: height * 0.05,          
-  },
-
-  arrow: {
-    color: '#cccccc',
-    fontSize: 18,
   },
 
   balance: {
     color: '#ffffff',
-    fontSize: 28,
+    fontSize: height * 0.03,
     fontWeight: 'bold',
     marginVertical: 10,
   },
 
   future: {
     color: '#cccccc',
-    fontSize: 14,
+    fontSize: height * 0.015,
   },
   actionsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingHorizontal: 10,
   },
   actionBox: {
     backgroundColor: 'transparent',
     width: width * 0.3,
     height: height * 0.15,
-    borderRadius: 10,
+    borderRadius: width * 0.04,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 4,
+    borderWidth: width * 0.01,
     borderColor: '#191919',
-    marginHorizontal: 2,
+    marginHorizontal: width * 0.005,
   },
   icon: {
-    fontSize: 22,
+    fontSize: width * 0.06,
     color: '#FCC000',
     marginBottom: height * 0.01,
   },
   actionText: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: width * 0.035,
   },
   card1: {
-    borderRadius: 10,
+    borderRadius: width * 0.035,
     backgroundColor: '#fff',
     width: width * 0.95, 
     height: height * 0.24,
     marginTop: width * 0.05, 
-    padding: 15,
-    // backgroundColor branco você já setou inline, pode tirar daqui
+    padding: width * 0.035,
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 10,
@@ -211,55 +192,53 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: height * 0.018,
     marginBottom: height * 0.01,
   },
   transactionRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 15,
+    marginBottom: width * 0.035,
   },
   transactionDetails: {
     flexShrink: 1,
   },
   transactionTitle: {
     fontWeight: '600',
-    fontSize: 14,
+    fontSize: width * 0.035,
   },
   transactionSubtitle: {
     color: '#555',
-    fontSize: 12,
+    fontSize: width * 0.03,
   },
   transactionRight: {
     alignItems: 'flex-end',
   },
   transactionDate: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: '#777',
   },
   transactionValue: {
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: width * 0.035,
   },
   footer: {
     position: 'absolute',
-    bottom: 40,         // sobe 20 pixels acima dos botões do sistema
-    left: 45,
-    right: 0,
+    bottom: height * 0.05,
+    left: width * 0.1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#191919',
-    paddingVertical: 15,
-    marginTop: 10,
+    paddingVertical: height * 0.02,
     width: width * 0.8,
-    gap: 30,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    gap: width * 0.05,
+    borderTopLeftRadius: width * 0.035,
+    borderTopRightRadius: width * 0.035,
     zIndex: 10,
   },
   footerIcon: {
-    fontSize: 24,
+    fontSize: width * 0.06,
     color: '#fff',
     //marginBottom: 50,
   },
