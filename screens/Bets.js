@@ -1,6 +1,5 @@
 // Home.js
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
@@ -9,7 +8,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 const { width, height } = Dimensions.get('window');
 
-export default function Account() {
+export default function Bets() {
   const navigation = useNavigation();
 
   /* VALOR QUE O USUÁRIO APOSTOU */

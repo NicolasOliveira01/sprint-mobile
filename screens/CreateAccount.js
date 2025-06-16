@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const { width, height } = Dimensions.get('window');
 
-export default function Account() {
+export default function CreateAccount() {
   const navigation = useNavigation();
 
   const [clientName, setClientName] = useState('');
@@ -50,8 +50,7 @@ export default function Account() {
         console.log('Status inesperado:', response.status);
       }*/
 
-    } catch (_) {
-      //console.error('Erro ao cadastrar:');
+    } catch (error) {
       if (axios.isAxiosError(error)) {
         // Silencie o erro silenciosamente (não mostre nada)
       }

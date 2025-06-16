@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, TextInput } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { Dimensions } from 'react-native';
@@ -40,9 +41,8 @@ export default function AccessAccount() {
         } else {
           setLoginError(true);
         }
-      } catch (_) {
+      } catch (error) {
         setLoginError(true);
-        //console.error('Erro no login:', error);
         if (axios.isAxiosError(error)) {
           // Silencie o erro silenciosamente (não mostre nada)
         }
